@@ -61,8 +61,21 @@ var db_user = "cmpe281" ;
 var db_pwd  = "cmpe281" ;
 var db_name = "gumballdb" ;
 
-   
+var MongoClient = require('mongodb').MongoClient;
+var url = 'mongodb://localhost/27017';
 
+MongoClient.connect(url, function(err, db) {
+
+    var cursor = db.collection('gumballdb').find();
+
+    cursor.each(function(err, doc) {
+
+        console.log(doc);
+
+    });
+}); 
+   
+/** 
 var db = new DB(db_name,
                 new DB_Server( db_host, db_port,
                             { auto_reconnect: true,
@@ -99,6 +112,7 @@ db_init = function (callback) {
     ], callback);
 };
 
+**/
 
 var secretKey = "kwRg54x2Go9iEdl49jFENRM12Mp711QI" ;
 
