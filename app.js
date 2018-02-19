@@ -59,7 +59,7 @@ var db_host = "localhost" ;
 var db_port = "27017" ;
 var db_user = "cmpe281" ;
 var db_pwd  = "cmpe281" ;
-var db_name = "test" ;
+var db_name = "gumballdb" ;
 
    
 
